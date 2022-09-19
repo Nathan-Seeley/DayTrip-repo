@@ -1,6 +1,6 @@
-greeting = ("Welcome to your day trip planner, enjoy!")
-import random
+greeting = print ("Welcome to your day trip planner, enjoy!")
    
+import random
 day_trip_destinations = ["Seattle", "New York City", "Las Vegas"]
 
 def user_destinations_choice (): 
@@ -20,7 +20,7 @@ user_destination = user_destinations_choice ()
 
 
 
-day_trip_restaurants = ["Ivars", "", " Balthazar", "Primal Steak House"]
+# day_trip_restaurants = ["Ivars", "", " Balthazar", "Primal Steak House"]
 # day_trip_mode_of_transportation = ["Plane", "Train", "Automobile"]
 # day_trip_entertainment = ["Shop at Pike Place Market", "See a musical on Broadway",
 # "Experience Blue Man Group"]
