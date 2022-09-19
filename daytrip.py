@@ -19,3 +19,17 @@ day_trip_dictionary = {
     "see_an_act" : "Experience Blue Man Group"
     }
     
+import random
+
+random_trip_destinatins = random.choice (day_trip_destinations)
+print (random_trip_destinatins)
+
+random_trip_restaurants = random.choice (day_trip_restaurants)
+print (random_trip_restaurants)
+
+random_transportation = random.choice (day_trip_mode_of_transportation)
+print (random_transportation)
+
+random_entertainment = random.choice (day_trip_entertainment)
+print (random_entertainment)
+
