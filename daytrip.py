@@ -20,14 +20,29 @@ day_trip_dictionary = {
     }
     
 import random
+from tkinter import N
 
-random_trip_destinations = random.choice (day_trip_destinations)
+def user_destination_generator ():
+    random_trip_destinations = random.choice (day_trip_destinations)
+    user_destination_input = input ("Would you like to go to {random_trip_destinations}? (y/n) ")
+    while user_destination_input != "y":
+        if user_destination_input == "n":
+            
+
+
+
        
 random_trip_restaurants = random.choice (day_trip_restaurants)
 
 random_transportation = random.choice (day_trip_mode_of_transportation)
 
 random_entertainment = random.choice (day_trip_entertainment)
+
+
+
+
+    
+
 
 
 
