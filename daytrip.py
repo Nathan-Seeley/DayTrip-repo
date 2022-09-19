@@ -39,14 +39,17 @@ day_trip_mode_of_transportation = ["Plane", "Train", "Flying Saucer"]
 
 def user_transportation_choice ():
     random_transportation = random.choice (day_trip_mode_of_transportation)
-    user_transportation_input = input (f"Do you want to travel via {day_trip_mode_of_transportation}? (y/n) ")
+    user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
     while user_transportation_input != "y":
         if user_transportation_input == "n":
             random_transportation = random.choice (day_trip_mode_of_transportation)
-            user_transportation_input = input (f"In that case what about a {random_transportation} instead? (y/n)")
+            user_transportation_input = input (f"In that case what about a {random_transportation}? (y/n) ")
         else:
-            print (f'' (y/n) ")    
+            print ("Well then, that looks interesting, but please enter the lower case letters n or y! ")   
+            user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
+    return random_transportation
 
+user_transportation = user_transportation_choice ()
 # day_trip_entertainment = ["Shop at Pike Place Market", "See a musical on Broadway",
 # "Experience Blue Man Group"]
 
