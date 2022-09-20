@@ -1,56 +1,56 @@
 greeting = print ("Welcome to your day trip planner, enjoy!")
    
 import random
-# day_trip_destinations = ["Seattle", "New York City", "Las Vegas"]
+day_trip_destinations = ["Seattle", "New York City", "Las Vegas"]
 
-# def user_destinations_choice (): 
-#     random_destinations = random.choice (day_trip_destinations)
-#     user_destination_input = input (f"Would you like to go to {random_destinations}? (y/n) ")
-#     while user_destination_input != "y":
-#         if user_destination_input == "n":
-#             random_destinations = random.choice (day_trip_destinations)
-#             user_destination_input = input (f"Would you like to go to {random_destinations} instead? (y/n) ")
-#         else:
-#             print ("Error: please use lower case letter y or n in order to continue with your trip planner.")
-#             user_destination_input = input (f"Would you like to go to {random_destinations}? (y/n) ")
+def user_destinations_choice (): 
+    random_destinations = random.choice (day_trip_destinations)
+    user_destination_input = input (f"Would you like to go to {random_destinations}? (y/n) ")
+    while user_destination_input != "y":
+        if user_destination_input == "n":
+            random_destinations = random.choice (day_trip_destinations)
+            user_destination_input = input (f"Would you like to go to {random_destinations} instead? (y/n) ")
+        else:
+            print ("Error: please use lower case letter y or n in order to continue with your trip planner.")
+            user_destination_input = input (f"Would you like to go to {random_destinations}? (y/n) ")
 
-#     return random_destinations
+    return random_destinations
 
-# user_destination = user_destinations_choice ()
+user_destination = user_destinations_choice ()
 
 
-# day_trip_restaurants = ["Ivars", "Balthazar", "Primal Steak House"]
+day_trip_restaurants = ["Ivars", "Balthazar", "Primal Steak House"]
 
-# def user_restaurants_choice ():
-#     random_restaurants = random.choice (day_trip_restaurants)
-#     user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
-#     while user_restaurant_input != "y":
-#         if user_restaurant_input == "n":
-#             random_restaurants = random.choice (day_trip_restaurants)
-#             user_restaurant_input = input (f"Do you want to dine at {random_restaurants} instead? (y/n) ")
-#         else:
-#             print ("Oops, please eat by using the lower case letters y or n")
-#             user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
+def user_restaurants_choice ():
+    random_restaurants = random.choice (day_trip_restaurants)
+    user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
+    while user_restaurant_input != "y":
+        if user_restaurant_input == "n":
+            random_restaurants = random.choice (day_trip_restaurants)
+            user_restaurant_input = input (f"Do you want to dine at {random_restaurants} instead? (y/n) ")
+        else:
+            print ("Oops, please eat by using the lower case letters y or n")
+            user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
    
-#     return random_restaurants
+    return random_restaurants
 
-# user_restaurant = user_restaurants_choice ()
+user_restaurant = user_restaurants_choice ()
 
-# day_trip_mode_of_transportation = ["Plane", "Train", "Flying Saucer"]
+day_trip_mode_of_transportation = ["Plane", "Train", "Flying Saucer"]
 
-# def user_transportation_choice ():
-#     random_transportation = random.choice (day_trip_mode_of_transportation)
-#     user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
-#     while user_transportation_input != "y":
-#         if user_transportation_input == "n":
-#             random_transportation = random.choice (day_trip_mode_of_transportation)
-#             user_transportation_input = input (f"In that case what about a {random_transportation}? (y/n) ")
-#         else:
-#             print ("Well then, that looks interesting, but please enter the lower case letters n or y! ")   
-#             user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
-#     return random_transportation
+def user_transportation_choice ():
+    random_transportation = random.choice (day_trip_mode_of_transportation)
+    user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
+    while user_transportation_input != "y":
+        if user_transportation_input == "n":
+            random_transportation = random.choice (day_trip_mode_of_transportation)
+            user_transportation_input = input (f"In that case what about a {random_transportation}? (y/n) ")
+        else:
+            print ("Well then, that looks interesting, but please enter the lower case letters n or y! ")   
+            user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
+    return random_transportation
 
-# user_transportation = user_transportation_choice ()
+user_transportation = user_transportation_choice ()
 
 day_trip_entertainment = ["Shop at Pike Place Market", "See a musical on Broadway","Experience Blue Man Group"]
 
@@ -65,7 +65,30 @@ def user_entertainment_choice ():
             print ("Invalid entry, please use a n or y")
             user_entertainment_input = input (f"Would you like to {random_entertainment} for your entertainment? (y/n) ")
 
+    return random_entertainment        
+
 user_entertainment = user_entertainment_choice ()
+
+
+c_user_destination = user_destination
+c_user_restaurant = user_restaurant
+c_user_entertainment = user_entertainment
+c_user_transportation = user_transportation
+
+def final_trip_confirmation ():
+    user_trip_confirmation = ("Congratulations! Your day trip is: You are going to {c_user_destination} on a {c_user_tranportation} to eat at {c_user_restaurant} and {c_user_entertainment}. Do you like this trip? (y/n) ")
+    while user_trip_confirmation != "y":
+        if user_trip_confirmation == "n":
+            new_entertainment_choice = user_entertainment ()
+
+        else:
+            print ("Invalid entry, please try using a (y/n). ")
+
+    return user_trip_confirmation
+
+user_confirmation = final_trip_confirmation
+print (user_confirmation)
+
 
 
 
