@@ -1,9 +1,9 @@
-greeting = print ("Welcome to your day trip planner, enjoy!")
+greeting = print ("Welcome to your day trip planner.  Let's explore some options together!")
    
 import random
 day_trip_destinations = ["Seattle", "New York City", "Las Vegas"]
 
-def user_destinations_choice (): 
+def choose_destination (): 
     random_destinations = random.choice (day_trip_destinations)
     user_destination_input = input (f"Would you like to go to {random_destinations}? (y/n) ")
     while user_destination_input != "y":
@@ -16,12 +16,12 @@ def user_destinations_choice ():
 
     return random_destinations
 
-user_destination = user_destinations_choice ()
+user_destination = choose_destination ()
 
 
 day_trip_restaurants = ["Ivars", "Balthazar", "Primal Steak House"]
 
-def user_restaurants_choice ():
+def choose_restaurant ():
     random_restaurants = random.choice (day_trip_restaurants)
     user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
     while user_restaurant_input != "y":
@@ -34,11 +34,11 @@ def user_restaurants_choice ():
    
     return random_restaurants
 
-user_restaurant = user_restaurants_choice ()
+user_restaurant = choose_restaurant ()
 
 day_trip_mode_of_transportation = ["Plane", "Train", "Flying Saucer"]
 
-def user_transportation_choice ():
+def choose_transportation ():
     random_transportation = random.choice (day_trip_mode_of_transportation)
     user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
     while user_transportation_input != "y":
@@ -50,11 +50,11 @@ def user_transportation_choice ():
             user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
     return random_transportation
 
-user_transportation = user_transportation_choice ()
+user_transportation = choose_transportation ()
 
 day_trip_entertainment = ["Shop at Pike Place Market", "See a musical on Broadway","Experience Blue Man Group"]
 
-def user_entertainment_choice ():
+def choose_entertainment ():
     random_entertainment = random.choice (day_trip_entertainment)
     user_entertainment_input = input (f"Would you like to {random_entertainment} for your entertainment? (y/n) ")
     while user_entertainment_input != "y":
@@ -62,32 +62,38 @@ def user_entertainment_choice ():
             random_entertainment = random.choice (day_trip_entertainment)
             user_entertainment_input = input (f"Would you like to {random_entertainment} instead? (y/n) ")
         else:
-            print ("Invalid entry, please use a n or y")
+            print ("Invalid entry, please use a y or n")
             user_entertainment_input = input (f"Would you like to {random_entertainment} for your entertainment? (y/n) ")
 
     return random_entertainment        
 
-user_entertainment = user_entertainment_choice ()
+user_entertainment = choose_entertainment ()
+
+# user_day_trip_dictionary = {
+# user_destination :
+# c_user_restaurant : u,
+# c_user_entertainment : user_entertainment,
+# c_user_transportation : user_transportation
+# }
 
 
-c_user_destination = user_destination
-c_user_restaurant = user_restaurant
-c_user_entertainment = user_entertainment
-c_user_transportation = user_transportation
 
-def final_trip_confirmation ():
-    user_trip_confirmation = ("Congratulations! Your day trip is: You are going to {c_user_destination} on a {c_user_tranportation} to eat at {c_user_restaurant} and {c_user_entertainment}. Do you like this trip? (y/n) ")
-    while user_trip_confirmation != "y":
-        if user_trip_confirmation == "n":
-            new_entertainment_choice = user_entertainment ()
+def confirm_final_trip ():
+    user_trip_confirmation = input (f"Congratulations! Your day trip is: You are going to {user_destination} on a {user_transportation} to eat at {user_restaurant} and {user_entertainment}. Do you like this trip? (y/n) "
+    while user_trip_confirmation == "y"
+    return confirm_final_trip
 
-        else:
-            print ("Invalid entry, please try using a (y/n). ")
+user_confirmation = confirm_final_trip ()
+    
+def print_confirmed_day_trip ():
+    confirmed_day_trip_input = input("Would you like to see your confirmed final trip? (y/n) ")
+    while confirmed_day_trip_input != "Y":
+        
 
-    return user_trip_confirmation
 
-user_confirmation = final_trip_confirmation
-print (user_confirmation)
+    
+
+
 
 
 
