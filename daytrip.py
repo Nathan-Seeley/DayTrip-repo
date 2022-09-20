@@ -18,6 +18,7 @@ import random
 
 # user_destination = user_destinations_choice ()
 
+
 # day_trip_restaurants = ["Ivars", "Balthazar", "Primal Steak House"]
 
 # def user_restaurants_choice ():
@@ -35,25 +36,37 @@ import random
 
 # user_restaurant = user_restaurants_choice ()
 
-day_trip_mode_of_transportation = ["Plane", "Train", "Flying Saucer"]
+# day_trip_mode_of_transportation = ["Plane", "Train", "Flying Saucer"]
 
-def user_transportation_choice ():
-    random_transportation = random.choice (day_trip_mode_of_transportation)
-    user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
-    while user_transportation_input != "y":
-        if user_transportation_input == "n":
-            random_transportation = random.choice (day_trip_mode_of_transportation)
-            user_transportation_input = input (f"In that case what about a {random_transportation}? (y/n) ")
+# def user_transportation_choice ():
+#     random_transportation = random.choice (day_trip_mode_of_transportation)
+#     user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
+#     while user_transportation_input != "y":
+#         if user_transportation_input == "n":
+#             random_transportation = random.choice (day_trip_mode_of_transportation)
+#             user_transportation_input = input (f"In that case what about a {random_transportation}? (y/n) ")
+#         else:
+#             print ("Well then, that looks interesting, but please enter the lower case letters n or y! ")   
+#             user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
+#     return random_transportation
+
+# user_transportation = user_transportation_choice ()
+
+day_trip_entertainment = ["Shop at Pike Place Market", "See a musical on Broadway","Experience Blue Man Group"]
+
+def user_entertainment_choice ():
+    random_entertainment = random.choice (day_trip_entertainment)
+    user_entertainment_input = input (f"Would you like to {random_entertainment} for your entertainment? (y/n) ")
+    while user_entertainment_input != "y":
+        if user_entertainment_input == "n":
+            random_entertainment = random.choice (day_trip_entertainment)
+            user_entertainment_input = input (f"Would you like to {random_entertainment} instead? (y/n) ")
         else:
-            print ("Well then, that looks interesting, but please enter the lower case letters n or y! ")   
-            user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
-    return random_transportation
+            print ("Invalid entry, please use a n or y")
+            user_entertainment_input = input (f"Would you like to {random_entertainment} for your entertainment? (y/n) ")
 
-user_transportation = user_transportation_choice ()
-# day_trip_entertainment = ["Shop at Pike Place Market", "See a musical on Broadway",
-# "Experience Blue Man Group"]
+user_entertainment = user_entertainment_choice ()
 
 
 
 
-# random_entertainment = random.choice (day_trip_entertainment)
