@@ -1,8 +1,10 @@
 greeting = print ("Welcome to your experience. Let's explore your trip for a day!")
 
+       
+   
+    
+    
 import random
-
-
 day_trip_destinations = ["Seattle", "New York City", "Las Vegas"]
 
 def choosing_destination (): 
@@ -32,7 +34,7 @@ def choosing_restaurant ():
         else:
             print ("Oops, please eat by using the lower case letters y or n")
             user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
-            
+                            
     return random_restaurants
 
 user_restaurant = choosing_restaurant ()
@@ -49,6 +51,7 @@ def choosing_transportation ():
         else:
             print ("Well then, that looks interesting, but please enter the lower case letters n or y! ")   
             user_transportation_input = input (f"Do you want to travel via {random_transportation}? (y/n) ")
+                    
     return random_transportation
 
 user_transportation = choosing_transportation ()
@@ -69,21 +72,39 @@ def choosing_entertainment ():
     return random_entertainment        
 
 user_entertainment = choosing_entertainment ()
-       
-def print_confirmed_day_trip ():   
-    confirmed_day_trip_input = input ("Would you like to display your final trip? (y/n) ")
-    while confirmed_day_trip_input != "n":
-        if confirmed_day_trip_input == "y":
-            print ("Your day trip is: You are going to {user_destination} on a {user_transportation} to eat at {user_restaurant} and {user_entertainment}. Have a great time!")
-        elif confirmed_day_trip_input == "n":
+
+def printing_user_trip_selections ():
+    user_input_print_confirmation = input ("Would you like to see your trip on the console (y/n)? ")
+    user_trip = ("Have a great time!") 
+    while user_input_print_confirmation != "n":
+        if user_input_print_confirmation == "y":
+            print (f"Congratulations! You are going to {user_destination} on a {user_transportation} to eat at {user_restaurant} and {user_entertainment}.")
             break
-        else: 
-            print ("Sorry, that is not a valid entry please use a y or n")
+        else:
+            print ("Invalid entry, please use a y or n")
+            user_input_print_confirmation = input ("Would you like to see your trip on the console (y/n)? ")  
+    print (user_trip)                
+                
+user_printable_trip = printing_user_trip_selections ()
+            
+
+            
+          
+        
 
 
-day_trip = print_confirmed_day_trip ()
+
+               
+
+
+
+
+
+
     
  
+
+
 
 
     
