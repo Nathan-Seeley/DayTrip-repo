@@ -77,8 +77,8 @@ user_entertainment = choosing_entertainment ()
 user_trip_choice = (f"Your trip choices: You are going to {user_destination} on a {user_transportation} to eat at {user_restaurant} and {user_entertainment}.")
 
 def confirming_trip ():
-    confirmation_response = ("Your trip is confirmed.")
-    user_confirmation_input = input (f"{user_trip_choice} Please confirm your trip by pressing (y). Otherwise, please press (n) to choose again. ")
+    confirmation_response = ("Congratulations, your trip is confirmed. Have a wonderful time.")
+    user_confirmation_input = input (f" Please confirm your trip by pressing (y). Otherwise, please press (n) to choose again. ")
     while user_confirmation_input != "y":
         if user_confirmation_input == "n":
             
@@ -153,15 +153,15 @@ def confirming_trip ():
             user_confirmation_input = input (f"{user_new_trip_choice} Please confirm your new trip by pressing (y). Otherwise, please press (n) to choose again. ")
             
             def printing_user_trip_selections ():
-                user_input_print_confirmation = input ("Would you like to display your trip on the console (y/n)? ")
-                user_trip = ("Have a great time!") 
+                user_input_print_confirmation = input ("Would you like to display your new trip on the console (y/n)? ")
+                 
                 while user_input_print_confirmation != "n":
                     if user_input_print_confirmation == "y":
                         print (f"You are going to {new_user_destination} on a {new_user_transportation} to eat at {new_user_restaurant} and {new_user_entertainment}.")
                         break
                     else:
                         print ("Invalid entry, please use a y or n")
-                        user_input_print_confirmation = input ("Would you like to see your trip on the console (y/n)? ")  
+                        user_input_print_confirmation = input ("Would you like to display your new trip on the console (y/n)? ")  
                                
             user_printable_trip = printing_user_trip_selections ()
 
@@ -172,35 +172,16 @@ def confirming_trip ():
     return (confirmation_response)
 def printing_user_trip_selections ():
     user_input_print_confirmation = input ("Would you like to display your trip on the console (y/n)? ")
-    user_trip = ("Have a great time!") 
+    
     while user_input_print_confirmation != "n":
         if user_input_print_confirmation == "y":
             print (f"You are going to {user_destination} on a {user_transportation} to eat at {user_restaurant} and {user_entertainment}.")
             break
         else:
             print ("Invalid entry, please use a y or n")
-        user_input_print_confirmation = input ("Would you like to see your trip on the console (y/n)? ")  
-        print (user_trip)                
+        user_input_print_confirmation = input ("Would you like to display your trip on the console (y/n)? ")  
+                        
                         
 user_printable_trip = printing_user_trip_selections ()     
 user_confirmation = confirming_trip ()
 print (user_confirmation)
-
-def printing_user_trip_selections ():
-            user_input_print_confirmation = input ("Would you like to display your trip on the console (y/n)? ")
-            user_trip = ("Have a great time!") 
-            while user_input_print_confirmation != "n":
-                if user_input_print_confirmation == "y":
-                    print (f"You are going to {user_destination} on a {user_transportation} to eat at {user_restaurant} and {user_entertainment}.")
-                    break
-                else:
-                    print ("Invalid entry, please use a y or n")
-                    user_input_print_confirmation = input ("Would you like to see your trip on the console (y/n)? ")  
-            print (user_trip)                
-                        
-user_printable_trip = printing_user_trip_selections ()
-
-
-
-                
-
