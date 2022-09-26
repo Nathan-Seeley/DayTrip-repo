@@ -33,7 +33,7 @@ def choosing_restaurant ():
             random_restaurants = random.choice (day_trip_restaurants)
             user_restaurant_input = input (f"Do you want to dine at {random_restaurants} instead? (y/n) ")
         else:
-            print ("Oops, please eat by using the lower case letters y or n")
+            print ("Oops, please try again by using the lower case letters y or n")
             user_restaurant_input = input (f"Do you want to dine at {random_restaurants}? (y/n) ")
                             
     return random_restaurants
