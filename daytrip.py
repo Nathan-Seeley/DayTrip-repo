@@ -185,3 +185,10 @@ def printing_user_trip_selections ():
 user_printable_trip = printing_user_trip_selections ()     
 user_confirmation = confirming_trip ()
 print (user_confirmation)
+
+my_day_trip_options_dictionary = {
+    "cities" : ["Seattle", "New York City", "Las Vegas"],
+    "transportation" : ["Plane", "Train", "Flying Saucer"],
+    "restaurants" : ["Ivars", "Balthazar", "Primal Steak House"],
+    "entertainment": ["Shop at Pike Place Market", "See a musical on Broadway","Experience Blue Man Group"]
+}
